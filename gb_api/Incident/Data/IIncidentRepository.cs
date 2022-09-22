@@ -1,20 +1,13 @@
-﻿using IncidentPackage.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IncidentPackage.Data
+﻿namespace gb_api.Incident.Data
 {
     public interface IIncidentRepository
     {
-        IEnumerable<Incident> GetIncidents();
-        Incident? GetIncident(long incidentId);
+        IEnumerable<Domain.Incident> GetIncidents();
+        Domain.Incident? GetIncident(long incidentId);
 
-        void Insert(Incident incident);
+        void Insert(Domain.Incident incident);
         void Save();
-        void UpdateIncident(Incident incident);
+        void UpdateIncident(Domain.Incident incident);
         void DeleteIncident(long incidentId);
     }
 }

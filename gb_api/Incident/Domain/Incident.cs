@@ -1,4 +1,4 @@
-﻿namespace IncidentPackage.Domain
+﻿namespace gb_api.Incident.Domain
 {
     public class Incident
     {

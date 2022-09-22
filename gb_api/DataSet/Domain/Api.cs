@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataSet.Domain
+﻿namespace gb_api.DataSet.Domain
 {
     public class Api
     {
