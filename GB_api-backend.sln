@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gb_api", "gb_api\gb_api.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gb_apiTests", "gb_apiTests\gb_apiTests.csproj", "{6B4272DA-5294-4DC9-B56A-49C287231B9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BagAPILib", "BagAPILib\BagAPILib.csproj", "{1A7176F8-B0A4-4A5C-A66F-742390487E2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B4272DA-5294-4DC9-B56A-49C287231B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B4272DA-5294-4DC9-B56A-49C287231B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B4272DA-5294-4DC9-B56A-49C287231B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
