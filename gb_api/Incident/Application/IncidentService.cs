@@ -18,7 +18,6 @@ namespace gb_api.Incident.Application
         public Domain.Incident? Get(long id)
         {
             return _repository.GetIncident(id);
-            //return Incidents.FirstOrDefault(ic => ic.Id == id);
         }
 
         public void Update()

@@ -1,6 +1,6 @@
 ﻿namespace gb_api.Incident.Data
 {
-    public class IncidentRepository : IIncidentRepository
+    public sealed class IncidentRepository : IIncidentRepository
     {
         private readonly IncidentContext _context;
 
