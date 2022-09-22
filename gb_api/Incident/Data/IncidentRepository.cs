@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using gb_api.Incident.Data;
-using gb_api.Incident.Domain;
-
-namespace IncidentPackage.Data
+﻿namespace gb_api.Incident.Data
 {
     public class IncidentRepository : IIncidentRepository
     {
@@ -17,17 +9,17 @@ namespace IncidentPackage.Data
             this._context = context;
         }
         
-        public IEnumerable<Incident> GetIncidents()
+        public IEnumerable<Domain.Incident> GetIncidents()
         {
             return _context.Incidents;
         }
         
-        public Incident? GetIncident(long incidentId)
+        public Domain.Incident? GetIncident(long incidentId)
         {
             return _context.Incidents.Find(incidentId);
         }
 
-        public void Insert(Incident incident)
+        public void Insert(Domain.Incident incident)
         {
             _context.Add(incident);
         }
@@ -37,7 +29,7 @@ namespace IncidentPackage.Data
             _context.SaveChanges();
         }
 
-        public void UpdateIncident(Incident incident)
+        public void UpdateIncident(Domain.Incident incident)
         {
             _context.Update(incident);
         }

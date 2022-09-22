@@ -1,32 +1,26 @@
-﻿using IncidentPackage.Application;
+﻿using gb_api.Incident.Application;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using gb_api.Incident.Domain;
 
-namespace IncidentPackage.Presentation
+namespace gb_api.Incident.Presentation
 {
     [ApiController]
     [Route("/incident")]
     public class IncidentController : ControllerBase
     {
         [HttpPost]
-        public void Create(Incident incident)
+        public void Create(Domain.Incident incident)
         {
             IncidentService.Add(incident);
         }
 
         [HttpGet("{id}")]
-        public Incident? Get(long id)
+        public Domain.Incident? Get(long id)
         {
             return IncidentService.Get(id);
         }
 
         [HttpPut("{id}")]
-        public Incident? Update(long id, Incident incident)
+        public Domain.Incident? Update(long id, Domain.Incident incident)
         {
             if(id != incident.Id)
             {
