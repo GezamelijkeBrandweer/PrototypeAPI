@@ -1,11 +1,19 @@
+using gb_api.Incident.Application;
+using gb_api.Incident.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Dependency injection 
+builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
+builder.Services.AddScoped<IncidentService>();
+builder.Services.AddScoped<IncidentContext>();
+
 
 var app = builder.Build();
 

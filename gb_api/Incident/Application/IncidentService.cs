@@ -1,29 +1,29 @@
+using gb_api.Incident.Data;
+
 namespace gb_api.Incident.Application
 {
-    public static class IncidentService
+    public sealed class IncidentService
     {
-        static List<Domain.Incident> Incidents { get; }
-        static IncidentService()
+        private readonly IIncidentRepository _repository;
+        public IncidentService(IIncidentRepository repository)
         {
-            Incidents = new List<Domain.Incident>
-            {
-                new Domain.Incident(2L),
-                new Domain.Incident(3L)
-            };
+            _repository = repository;
         }
 
-        public static void Add(Domain.Incident incident)
+        public void Add(Domain.Incident incident)
         {
-            Incidents.Add(incident);  
+            _repository.Insert(incident);
         }
 
-        public static Domain.Incident? Get(long id)
+        public Domain.Incident? Get(long id)
         {
-            return Incidents.FirstOrDefault(ic => ic.Id == id);
+            return _repository.GetIncident(id);
+            //return Incidents.FirstOrDefault(ic => ic.Id == id);
         }
 
-        public static void Update()
+        public void Update()
         {
+            //return _repository.UpdateIncident();
             throw new NotImplementedException();
         }
     }
