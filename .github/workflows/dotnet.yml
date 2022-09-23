@@ -24,4 +24,4 @@ jobs:
     - name: Stryker
       run: dotnet tool install -g dotnet-stryker
     - name: Test
-      run: dotnet-stryker --reporter "html"
+      run: dotnet-stryker --reporter "markdown"
