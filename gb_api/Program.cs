@@ -1,5 +1,5 @@
-using gb_api.Incident.Application;
-using gb_api.Incident.Data;
+using gb_api.Server.Application;
+using gb_api.Server.Data.IncidentDB;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 // Dependency injection 
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IncidentService>();
 builder.Services.AddScoped<IncidentContext>();
+builder.Services.AddScoped<LocatieService>();
 
 
 var app = builder.Build();

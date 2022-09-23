@@ -1,14 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IncidentPackage.Domain;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using gb_api.Incident.Domain;
+﻿using System.Diagnostics;
+using gb_api.Server.Domain;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace IncidentPackage.Domain.Tests
+namespace gb_apiTests.Incident.Domain
 {
     [TestClass()]
     public class IncidentTests
@@ -16,7 +10,8 @@ namespace IncidentPackage.Domain.Tests
         [TestMethod()]
         public void IncidentTest()
         {
-            var incident = new Incident(21);
+            var locatie = new Locatie("3841VB", "dropsweg", 43, "Duiven", 55.23, 4.5541);
+            var incident = new gb_api.Server.Domain.Incident(21, "Brand",locatie);
             Debug.Assert(incident.Id == 21);
         }
     }

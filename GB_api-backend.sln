@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gb_api", "gb_api\gb_api.csproj", "{BB759695-A1D1-448E-9261-D9AC1CEA027E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gb_api", "gb_api\gb_api.csproj", "{BB759695-A1D1-448E-9261-D9AC1CEA027E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gb_apiTests", "gb_apiTests\gb_apiTests.csproj", "{6B4272DA-5294-4DC9-B56A-49C287231B9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gb_apiTests", "gb_apiTests\gb_apiTests.csproj", "{6B4272DA-5294-4DC9-B56A-49C287231B9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BagAPILib", "BagAPILib\BagAPILib.csproj", "{1A7176F8-B0A4-4A5C-A66F-742390487E2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BagAPILib", "BagAPILib\BagAPILib.csproj", "{1A7176F8-B0A4-4A5C-A66F-742390487E2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMeteoAPILib", "OpenMeteoAPILib\OpenMeteoAPILib.csproj", "{F5A0B1E8-7C91-4840-A284-A7FDA278BF71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapsAPILib", "MapsAPILib\MapsAPILib.csproj", "{01379FB7-2B82-43D6-8182-9237118EDFC0}"
 EndProject
@@ -29,10 +31,10 @@ Global
 		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A7176F8-B0A4-4A5C-A66F-742390487E2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01379FB7-2B82-43D6-8182-9237118EDFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01379FB7-2B82-43D6-8182-9237118EDFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01379FB7-2B82-43D6-8182-9237118EDFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01379FB7-2B82-43D6-8182-9237118EDFC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A0B1E8-7C91-4840-A284-A7FDA278BF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A0B1E8-7C91-4840-A284-A7FDA278BF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A0B1E8-7C91-4840-A284-A7FDA278BF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A0B1E8-7C91-4840-A284-A7FDA278BF71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
