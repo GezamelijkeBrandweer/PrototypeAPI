@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BagAPILib\BagAPILib.csproj" />
+    <ProjectReference Include="..\OpenMeteoAPILib\OpenMeteoAPILib.csproj" />
   </ItemGroup>
 
 </Project>
