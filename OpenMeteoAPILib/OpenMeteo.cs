@@ -10,7 +10,7 @@ namespace OpenMeteoAPILib
             BaseAddress = new Uri("https://api.open-meteo.com/v1/"),
         };
         
-        public static async Task<JsonNode> GetWeerInfo(double latitude, double longitude)
+        public static async Task<JsonNode> GetWeerInfo(double? latitude, double? longitude)
         {
             
             using var response = await OpenMeteoClient.GetAsync($"forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m,relativehumidity_2m,rain,windspeed_10m,winddirection_10m,windgusts_10m");

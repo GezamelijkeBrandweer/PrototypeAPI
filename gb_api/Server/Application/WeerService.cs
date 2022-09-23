@@ -5,7 +5,7 @@ namespace gb_api.Server.Application;
 
 public class WeerService
 {
-    public async Task<Weersinformatie> GetWeerFromLocatie(double latitude, double longitude)
+    public async Task<Weersinformatie> GetWeerFromLocatie(double? latitude, double? longitude)
     {
         var jsonData = await OpenMeteo.GetWeerInfo(latitude, longitude);
         

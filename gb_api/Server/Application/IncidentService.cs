@@ -16,13 +16,17 @@ public sealed class IncidentService
         _weerService = weerService;
     }
 
-    public async void Add(long id, string? name, string postcode, int huisnummer, double latitude, double longitude)
+    public async Task<Incident> Add(long id, string? name, string postcode, int huisnummer)
     {
         var locatie = await _locatieService.GetLocatieFromPostcodeHuisnummer(postcode, huisnummer);
-        var weer = await _weerService.GetWeerFromLocatie(latitude,longitude);
 
+        // convert de lat en long naar goede format
+        // var weer = await _weerService.GetWeerFromLocatie(locatie.Latitude,locatie.Longitude);
+        var weer = await _weerService.GetWeerFromLocatie(12,12);
+        
         var incident = new Incident(id, name, locatie, weer);
         _repository.Insert(incident);
+        return incident;
     }
 
     public Incident? Get(long id)
