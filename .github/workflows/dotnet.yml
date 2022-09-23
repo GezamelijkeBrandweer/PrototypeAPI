@@ -24,4 +24,4 @@ jobs:
     - name: Stryker
       run: dotnet tool install -g dotnet-stryker
     - name: Test
-      run: dotnet-stryker --dashboard-api-key ${{secrets.STRYKER_API_KEY}}
+      run: dotnet-stryker --reporter "dashboard" --dashboard-api-key ${{secrets.STRYKER_API_KEY}}
