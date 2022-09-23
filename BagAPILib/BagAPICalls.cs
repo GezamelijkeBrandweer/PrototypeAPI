@@ -4,10 +4,10 @@ namespace BagAPILib;
 
 public static class BagApiCalls
 {
-    private const string BagKey = "l7e6e43c660b6f46d6a0c7ddd72a159030";
+    private const string BagKey = "l7bcbd7327691b4319b2e96b6bda713d7d";
     private static readonly HttpClient BagClient = new()
     {
-        BaseAddress = new Uri("https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/"),
+        BaseAddress = new Uri("https://api.bag.acceptatie.kadaster.nl/lvbag/individuelebevragingen/v2/"),
     };
 
     // gebruik adressenUitGebreid BAG API
