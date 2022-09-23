@@ -1,5 +1,7 @@
 using gb_api.Server.Application;
 using gb_api.Server.Data.IncidentDB;
+using gb_api.Server.Data.LocatieDB;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,12 +11,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// DB init
+builder.Services.AddDbContext<IncidentContext>(contextOptions => contextOptions.UseInMemoryDatabase("Incident"));
+builder.Services.AddDbContext<LocatieContext>(contextOptions => contextOptions.UseInMemoryDatabase("Locatie"));
+builder.Services.AddConnections();
+
 
 // Dependency injection 
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IncidentService>();
-builder.Services.AddScoped<IncidentContext>();
 builder.Services.AddScoped<LocatieService>();
+builder.Services.AddScoped<ILocatieRepository, LocatieRepository>();
 
 
 var app = builder.Build();
