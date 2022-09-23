@@ -1,4 +1,5 @@
 ﻿using gb_api.Incident.Application;
+using MapsAPILib;
 using Microsoft.AspNetCore.Mvc;
 
 namespace gb_api.Incident.Presentation
@@ -42,6 +43,14 @@ namespace gb_api.Incident.Presentation
             
             _service.Update();
             return existingIncident;
+        }
+
+        [HttpGet("/request")]
+        public async Task<List<TrafficIncident>?> TestRequest()
+        {
+            MapsApi api = new(null);
+            List<TrafficIncident> incidents = await api.GetIncidentsIn(Array.Empty<double>());
+            return incidents;
         }
     }
 }
