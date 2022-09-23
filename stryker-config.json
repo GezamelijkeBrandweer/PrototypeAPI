@@ -4,7 +4,7 @@
     "test-projects":["./gb_apiTests/gb_apiTests.csproj"],
     "mutation-level": "Standard",
     "thresholds": { "high": 70, "low": 60, "break": 0 },
-    "dashboard-url": "https://dashboard.stryker-mutator.io/repos/GezamelijkeBrandweer"
-    
+    "dashboard-url": "https://dashboard.stryker-mutator.io/repos/GezamelijkeBrandweer",
+    "reporters": ["html","cleartexttree", "progress"]
   }
 }
