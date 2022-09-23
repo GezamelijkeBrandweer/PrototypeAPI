@@ -1,8 +1,8 @@
 ﻿{
   "stryker-config":
   {
-    "solution": "../GB_api-backend",
-    "project": "gb_apiTests",
+    "solution": "../GB_api-backend.sln",
+    "project": "../GB_api-backend/gb_apiTests.csproj",
     "mutation-level": "Standard",
     "thresholds": { "high": 80, "low": 60, "break": 0 }
     
