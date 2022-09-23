@@ -21,7 +21,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Styker
+    - name: Stryker
       run: dotnet tool install -g dotnet-stryker
     - name: Test
-      run: dotnet stryker --no-build --verbosity normal
+      run: dotnet-stryker 
