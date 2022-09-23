@@ -2,7 +2,7 @@
 
 namespace OpenMeteoAPILib
 {
-    public class OpenMeteo
+    public static class OpenMeteo
     {
 
         private static readonly HttpClient OpenMeteoClient = new()

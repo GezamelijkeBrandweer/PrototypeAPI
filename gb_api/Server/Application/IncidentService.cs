@@ -1,4 +1,3 @@
-using gb_api.Server.Data;
 using gb_api.Server.Data.IncidentDB;
 using gb_api.Server.Domain;
 
@@ -6,20 +5,23 @@ namespace gb_api.Server.Application;
 
 public sealed class IncidentService
 {
+    private readonly WeerService _weerService;
     private readonly LocatieService _locatieService;
     private readonly IIncidentRepository _repository;
 
-    public IncidentService(IIncidentRepository repository, LocatieService locatieService)
+    public IncidentService(IIncidentRepository repository, LocatieService locatieService, WeerService weerService)
     {
         _repository = repository;
         _locatieService = locatieService;
+        _weerService = weerService;
     }
 
-    public async void Add(long id, string? name, string postcode, int huisnummer)
+    public async void Add(long id, string? name, string postcode, int huisnummer, double latitude, double longitude)
     {
         var locatie = await _locatieService.GetLocatieFromPostcodeHuisnummer(postcode, huisnummer);
-        Console.WriteLine(locatie);
-        var incident = new Incident(id, name, locatie);
+        var weer = await _weerService.GetWeerFromLocatie(latitude,longitude);
+
+        var incident = new Incident(id, name, locatie, weer);
         _repository.Insert(incident);
     }
 

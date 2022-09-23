@@ -7,6 +7,10 @@ public sealed class LocatieContext : DbContext
 {
     public DbSet<Locatie> Locaties { get; set; }
     
+    public LocatieContext(DbContextOptions<LocatieContext> options) : base(options)
+    {
+    }
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseInMemoryDatabase("gb_backend");

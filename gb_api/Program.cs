@@ -1,6 +1,8 @@
 using gb_api.Server.Application;
 using gb_api.Server.Data.IncidentDB;
 using gb_api.Server.Data.LocatieDB;
+using gb_api.Server.Data.WeerDB;
+using gb_api.Server.Domain;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,7 @@ builder.Services.AddSwaggerGen();
 // DB init
 builder.Services.AddDbContext<IncidentContext>(contextOptions => contextOptions.UseInMemoryDatabase("Incident"));
 builder.Services.AddDbContext<LocatieContext>(contextOptions => contextOptions.UseInMemoryDatabase("Locatie"));
+builder.Services.AddDbContext<WeerContext>(contextOptions => contextOptions.UseInMemoryDatabase("Weer"));
 builder.Services.AddConnections();
 
 
@@ -21,7 +24,9 @@ builder.Services.AddConnections();
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IncidentService>();
 builder.Services.AddScoped<LocatieService>();
+builder.Services.AddScoped<WeerService>();
 builder.Services.AddScoped<ILocatieRepository, LocatieRepository>();
+builder.Services.AddScoped<IWeerRepository, WeerRepository>();
 
 
 var app = builder.Build();

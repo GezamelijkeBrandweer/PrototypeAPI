@@ -16,9 +16,9 @@ public class IncidentController : ControllerBase
     }
 
     [HttpPost]
-    public Incident? Create(long id, string? name, string postcode, int huisnummer)
+    public Incident? Create(long id, string? name, string postcode, int huisnummer, double latitude, double longitude)
     {
-        _service.Add(id, name, postcode, huisnummer);
+        _service.Add(id, name, postcode, huisnummer, latitude, longitude);
         return Get(id);
     }
 

@@ -1,9 +1,11 @@
-﻿namespace gb_api.Server.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace gb_api.Server.Domain;
 
 public class Weersinformatie
 {
-    public Weersinformatie(List<string>? time, List<double>? temperature, List<double>? humidity, List<double>? rain,
-        List<double>? windspeed, List<double>? winddirection, List<double>? windgusts)
+    public Weersinformatie(string? time, string? temperature, string? humidity, string? rain,
+        string? windspeed, string? winddirection, string? windgusts)
     {
         Time = time;
         Temperature = temperature;
@@ -13,18 +15,22 @@ public class Weersinformatie
         Winddirection = winddirection;
         Windgusts = windgusts;
     }
+    
+    public Weersinformatie(){}
+    
+    public long Id { get; set; }
 
-    public List<string>? Time { get; set; }
+    public string? Time { get; set; }
 
-    public List<double>? Temperature { get; set; }
+    public string? Temperature { get; set; }
 
-    public List<double>? Humidity { get; set; }
+    public string? Humidity { get; set; }
 
-    public List<double>? Rain { get; set; }
+    public string? Rain { get; set; }
 
-    public List<double>? Windspeed { get; set; }
+    public string? Windspeed { get; set; }
 
-    public List<double>? Winddirection { get; set; }
+    public string? Winddirection { get; set; }
 
-    public List<double>? Windgusts { get; set; }
+    public string? Windgusts { get; set; }
 }
