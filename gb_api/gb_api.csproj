@@ -22,4 +22,8 @@
     <Folder Include="DataSet\Presentation\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BagAPILib\BagAPILib.csproj" />
+  </ItemGroup>
+
 </Project>
