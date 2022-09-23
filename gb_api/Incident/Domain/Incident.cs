@@ -2,16 +2,13 @@
 {
     public class Incident
     {
-        private long id;
-        private TimeSpan time;
-        private string? name;
+        public long Id { get; set; }
+        public string? Name { get; set; }
 
-        public Incident(long id)
+        public Incident(long id, string? name)
         {
-            this.id = id;
+            Id = id;
+            Name = name;
         }
-
-        public long Id { get { return id; } set { id = value; } }
-
     }
 }

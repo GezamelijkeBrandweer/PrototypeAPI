@@ -15,18 +15,19 @@ namespace gb_api.Incident.Presentation
         }
         
         [HttpPost]
-        public void Create(Domain.Incident incident)
+        public Domain.Incident? Create(long id, string? name)
         {
-            _service.Add(incident);
+            _service.Add(new Domain.Incident(id, name));
+            return Get(id);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         public Domain.Incident? Get(long id)
         {
             return _service.Get(id);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public Domain.Incident? Update(long id, Domain.Incident incident)
         {
             if(id != incident.Id)
