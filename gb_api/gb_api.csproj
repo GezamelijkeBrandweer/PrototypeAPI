@@ -20,6 +20,7 @@
     <Folder Include="DataSet\Application\" />
     <Folder Include="DataSet\Data\" />
     <Folder Include="DataSet\Presentation\" />
+    <Folder Include="Incident\Data" />
   </ItemGroup>
 
   <ItemGroup>

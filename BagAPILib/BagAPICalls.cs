@@ -19,8 +19,9 @@ public static class BagApiCalls
         
         response.EnsureSuccessStatusCode();
         var jsoNresponse = await response.Content.ReadAsStringAsync();
-        var document = JsonNode.Parse(jsoNresponse);
-        var adres = document["_embedded"]["adressen"];
+        var document = JsonNode.Parse(jsoNresponse)!;
+        //Met deze api call kunnen er ook meerdere adressen opgehaald worden hier maakt deze methode niet gebruik van vandaar de [0]
+        var adres = document["_embedded"]!["adressen"][0]!;
         return adres;
     }
 

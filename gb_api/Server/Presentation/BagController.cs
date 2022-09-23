@@ -2,7 +2,7 @@
 using BagAPILib;
 using Microsoft.AspNetCore.Mvc;
 
-namespace gb_api.Incident.Presentation;
+namespace gb_api.Server.Presentation;
 
 [ApiController]
 [Route("/bag")]

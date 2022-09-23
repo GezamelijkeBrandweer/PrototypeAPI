@@ -1,5 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using gb_api.Server.Domain;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace gb_apiTests.Incident.Domain
 {
@@ -9,7 +10,8 @@ namespace gb_apiTests.Incident.Domain
         [TestMethod()]
         public void IncidentTest()
         {
-            var incident = new gb_api.Incident.Domain.Incident(21, "test");
+            var locatie = new Locatie("3841VB", "dropsweg", 43, "Duiven", 55.23, 4.5541);
+            var incident = new gb_api.Server.Domain.Incident(21, "Brand",locatie);
             Debug.Assert(incident.Id == 21);
         }
     }
