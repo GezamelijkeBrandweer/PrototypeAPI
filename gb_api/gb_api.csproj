@@ -26,4 +26,8 @@
     <ProjectReference Include="..\BagAPILib\BagAPILib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MapsAPILib\MapsAPILib.csproj" />
+  </ItemGroup>
+
 </Project>
