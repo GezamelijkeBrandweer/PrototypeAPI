@@ -1,8 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenMeteoAPILib;
 
-namespace gb_apiTests.Incident.Domain
+namespace gb_apiTests.Test.Domain
 {
     [TestClass()]
     public class WeerTests
